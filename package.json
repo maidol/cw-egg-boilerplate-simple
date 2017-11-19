@@ -1,6 +1,6 @@
 {
     "name": "cw-egg-boilerplate-simple",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "boilerplate for cw egg quickstart",
     "main": "index.js",
     "scripts": {
@@ -8,8 +8,8 @@
     },
     "homepage": "https://github.com/maidol/cw-egg-boilerplate-simple",
     "repository": {
-      "type": "git",
-      "url": "git@github.com:maidol/cw-egg-boilerplate-simple.git"
+        "type": "git",
+        "url": "git@github.com:maidol/cw-egg-boilerplate-simple.git"
     },
     "author": "maidol",
     "license": "ISC"
