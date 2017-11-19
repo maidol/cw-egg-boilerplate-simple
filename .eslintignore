@@ -1,0 +1,13 @@
+logs
+coverage
+run
+test
+.vscode
+.dockerignore
+.gitignore
+Dockerfile
+readme.md
+public
+view
+*.json
+*.d.ts

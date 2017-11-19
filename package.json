@@ -1,0 +1,44 @@
+{
+  "name": "my-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "egg-bin dev --port 7001",
+    "test": "egg-bin test",
+    "cov": "egg-bin cov",
+    "debug": "egg-bin debug",
+    "start": "egg-scripts start --workers=2",
+    "start4": "egg-scripts start --workers=4",
+    "stop": "egg-scripts stop",
+    "hint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cw-logger": "^1.1.4",
+    "debug": "^3.1.0",
+    "egg": "^1.10.0",
+    "egg-scripts": "^2.1.0",
+    "egg-view-nunjucks": "^2.1.4",
+    "joi": "^13.0.1",
+    "koa-compress": "^2.0.0",
+    "koa-is-json": "^1.0.0",
+    "lodash": "^4.17.4",
+    "promise-mysql2": "^1.0.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.3.5",
+    "egg-mock": "^3.13.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-egg": "^5.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
