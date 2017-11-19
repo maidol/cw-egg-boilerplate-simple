@@ -6,7 +6,7 @@ module.exports = app => ({
 		hostname: '127.0.0.1',
 		// path: '/var/run/egg.sock',
 	},
-	keys: '123456',
+	keys: '{{keys}}',
 	view: {
 		defaultViewEngine: 'nunjucks',
 		mapping: {

@@ -1,7 +1,7 @@
 {
-  "name": "my-sample",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{description}}",
   "scripts": {
     "dev": "egg-bin dev --port 7001",
     "test": "egg-bin test",
@@ -12,7 +12,7 @@
     "stop": "egg-scripts stop",
     "hint": "eslint ."
   },
-  "author": "",
+  "author": "{{author}}",
   "license": "ISC",
   "dependencies": {
     "cw-logger": "^1.1.4",
