@@ -1,0 +1,1 @@
+# cw-egg-boilerplate-simple
