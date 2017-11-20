@@ -13,7 +13,7 @@ npm run dev # 开发环境
 npm run test # 单元测试
 npm run cov # 代码覆盖率
 npm run start # 生产环境
-npm run hint # 检查语法
+npm run lint # 检查语法
 ```
 
 ## 开发工具
@@ -164,7 +164,7 @@ eslint index.js
 - 先拉取, 检查语法, 再推送
 ```bash
 # 检查语法
-npm run hint
+npm run lint
 ```
 
 ## 框架相关简介
