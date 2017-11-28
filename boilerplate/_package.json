@@ -10,8 +10,7 @@
     "start": "egg-scripts start --workers=2",
     "start4": "egg-scripts start --workers=4",
     "stop": "egg-scripts stop",
-    "lint": "eslint .",
-    "upgrade": "egg-bin autod"
+    "lint": "eslint ."
   },
   "author": "{{author}}",
   "license": "ISC",
