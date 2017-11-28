@@ -1,4 +1,6 @@
-module.exports = app => class MockController extends app.Controller {
+const { Controller } = require('egg');
+
+module.exports = class MockController extends Controller {
 	async post({
 		request
 	}) {

@@ -1,4 +1,6 @@
-module.exports = app => class User extends app.Service {
+const { Service } = require('egg');
+
+module.exports = class User extends Service {
 	async get(name) {
 		if (name === 'king') return Promise.resolve({
 			name: 'king'
@@ -11,9 +13,9 @@ module.exports = app => class User extends app.Service {
 		//   ctx
 		// } = this;
 		try {
-			const pool = app.dbpool('eggsample');
+			const pool = this.app.dbpool('eggsample');
 			const [rows, fields] = await pool.query('select * from user');
-			const [insertResult, updateResult] = await app.beginTransaction('eggsample', async(tran) => {
+			const [insertResult, updateResult] = await this.app.beginTransaction('eggsample', async(tran) => {
 				const [insertResult] = await tran.query('insert into user set ?;', {
 					name: 'king1'
 				});

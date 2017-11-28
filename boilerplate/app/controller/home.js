@@ -1,4 +1,6 @@
-module.exports = app => class HomeController extends app.Controller {
+const { Controller } = require('egg');
+
+module.exports = class HomeController extends Controller {
 	async index(ctx) {
 		// const ctx = this.ctx;
 		// ctx.consoleLogger.info('hello world');

@@ -1,4 +1,6 @@
-module.exports = app => class NewsController extends app.Controller {
+const { Controller } = require('egg');
+
+module.exports = class NewsController extends Controller {
 	async list() {
 		const {
 			ctx

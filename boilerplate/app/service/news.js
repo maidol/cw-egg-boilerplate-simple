@@ -1,12 +1,13 @@
-module.exports = (app) => {
-	class NewsService extends app.Service {
+const { Service } = require('egg');
+
+module.exports = class NewsService extends Service {
 		async list(page = 1) {
 			this.logger.info('service list');
 			const { ctx } = this;
 			const {
 				serverUrl,
 				pageSize
-			} = app.config.news;
+			} = this.app.config.news;
 			const {
 				data: idList
 			} = await ctx.curl(`${serverUrl}/topstorie.json`, {
@@ -25,6 +26,4 @@ module.exports = (app) => {
 			});
 			ctx.cwLogger.info(newsList);
 		}
-	}
-	return NewsService;
 };
