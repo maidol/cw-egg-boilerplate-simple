@@ -1,15 +1,16 @@
 const Cwlogger = require('cw-logger2');
 
+const DBPOOL = Symbol('Agent#dbpool');
 module.exports = {
 	proxy(k, v) {
 
 	},
 	dbpool(dbname) {
-		this._dbpool = this._dbpool || {};
-		if (!this._dbpool[dbname]) {
-			this._dbpool[dbname] = this.mysql.createPool(this.config.db[dbname]);
+		this[DBPOOL] = this[DBPOOL] || {};
+		if (!this[DBPOOL][dbname]) {
+			this[DBPOOL][dbname] = this.mysql.createPool(this.config.db[dbname]);
 		}
-		return this._dbpool[dbname];
+		return this[DBPOOL][dbname];
 	},
 	dbconn(dbname) {
 		return this.dbpool(dbname).getConnection();

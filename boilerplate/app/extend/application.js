@@ -1,6 +1,7 @@
 const Cwlogger = require('cw-logger2');
 
 const CACHE = Symbol('Application#cache');
+const DBPOOL = Symbol('Application#dbpool');
 module.exports = {
 	get cache() {
 		// this 就是 app 对象，在其中可以调用 app 上的其他方法，或访问属性
@@ -16,11 +17,11 @@ module.exports = {
 		this[CACHE] = value;
 	},
 	dbpool(dbname) {
-		this._dbpool = this._dbpool || {};
-		if (!this._dbpool[dbname]) {
-			this._dbpool[dbname] = this.mysql.createPool(this.config.db[dbname]);
+		this[DBPOOL] = this[DBPOOL] || {};
+		if (!this[DBPOOL][dbname]) {
+			this[DBPOOL][dbname] = this.mysql.createPool(this.config.db[dbname]);
 		}
-		return this._dbpool[dbname];
+		return this[DBPOOL][dbname];
 	},
 	dbconn(dbname) {
 		return this.dbpool(dbname).getConnection();
