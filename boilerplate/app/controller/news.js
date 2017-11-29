@@ -18,8 +18,9 @@ module.exports = class NewsController extends Controller {
 				}
 			]
 		};
-		const page = ctx.query.page || 1;
-		const newsList = await ctx.service.news.list(page);
-		ctx.body = [dataList, newsList];
+    const page = ctx.query.page || 1;
+    await ctx.render('list.tpl', dataList);
+		// const newsList = await ctx.service.news.list(page);
+    // ctx.body = [dataList, newsList];
 	}
 };

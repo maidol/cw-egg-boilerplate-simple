@@ -1,4 +1,4 @@
-const cwlogCreator = require('cw-logger');
+const Cwlogger = require('cw-logger2');
 
 const CACHE = Symbol('Application#cache');
 module.exports = {
@@ -46,12 +46,12 @@ module.exports = {
 		const lconfig = this.config.cwLogger;
 		const cs = lconfig.bunyan.categorys;
 		lconfig.bunyan.categorys = Object.keys(cs).map(k => cs[k]);
-		const log = cwlogCreator(lconfig);
+		const log = new Cwlogger(lconfig);
 		this.cwLog = log;
 
 		this.config.cwLogger.bunyan.categorys.forEach((c) => {
 			const name = `${c.name}Logger`;
-			this[name] = log[c.name];
+			this[name] = log.getLogger(c.name);
 		});
 
 		this.cwLogger = log.app;

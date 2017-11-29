@@ -5,6 +5,7 @@ module.exports = (options, app) => async function apiResponse(ctx, next) {
   try {
     await next();
     if (ctx.response.status === 404 && ctx.body === undefined) {
+      // ctx.response.status = 404; // 手动设置
       ctx.body = ctx.buildReturnObject(
         apiCode.retCodeEnum.success,
         apiCode.errCodeEnum.notReturnData, 'success', null
