@@ -1,6 +1,6 @@
 {
     "name": "cw-egg-boilerplate-simple",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "boilerplate for cw egg quickstart",
     "main": "index.js",
     "scripts": {
