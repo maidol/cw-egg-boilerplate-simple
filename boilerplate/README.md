@@ -1,19 +1,40 @@
 ## cw egg-sample
 ------
+node >= v8.9.0 lts
+
 [基于egg框架](https://eggjs.org/zh-cn/)
 
 ## 启动
 ------
+```txt
+可通过拉取代码库启动或使用工具cw-init
+```
+
+### 通过拉取代码库启动
 
 ```bash
-git clone https://github.com/maidol/egg-sample.git
-cd egg-sample
-npm i # 安装依赖
-npm run dev # 开发环境
-npm run test # 单元测试
-npm run cov # 代码覆盖率
-npm run start # 生产环境
-npm run lint # 检查语法
+$ git clone https://github.com/maidol/egg-sample.git
+$ cd egg-sample
+$ npm i # 安装依赖
+$ npm run dev # 开发环境
+$ npm run test # 单元测试
+$ npm run cov # 代码覆盖率
+$ npm run start # 生产环境
+$ npm run lint # 检查语法
+```
+
+### 通过[工具cw-init](https://github.com/maidol/cw-init)启动
+
+```bash
+$ npm i cw-init -g # 安装cw-init
+$ cw-init sample # 根据提示选择cw-egg
+$ cd sample
+$ npm i
+$ npm run dev # 开发环境
+$ npm run test # 单元测试
+$ npm run cov # 代码覆盖率
+$ npm run start # 生产环境
+$ npm run lint # 检查语法
 ```
 
 ## 开发工具
