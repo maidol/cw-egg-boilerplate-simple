@@ -3,7 +3,8 @@ const Joi = require('joi');
 const apiCode = require('./lib/api_code_enum');
 
 module.exports = (app) => {
-	app.logger.info('app running ...', app.config.env, app.baseDir, app.name);
+  app.logger.info('app running ...', app.config.env, app.baseDir, app.name);
+  app.messenger.sendToAgent('app-running', `[pid/${process.pid}] app running..., ${app.config.env}, ${app.baseDir}, ${app.name}`);
 
 	app.mysql = mysql;
 	app.Joi = Joi;

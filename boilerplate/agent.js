@@ -54,7 +54,11 @@ module.exports = (agent) => {
 
 	agent.beforeStart(async() => {
 
-	});
+  });
+  
+  agent.messenger.on('app-running', (data) => {
+    agent.cwLogger.info(data);
+  });
 
 	// 在这里写你的初始化逻辑
 	// 也可以通过 messenger 对象发送消息给 App Worker

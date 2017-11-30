@@ -31,6 +31,7 @@ module.exports = app => ({
 					src: true
 				},
 				agent: {
+          pretty: true,
 					src: true
 				}
 			}

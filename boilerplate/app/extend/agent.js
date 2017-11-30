@@ -52,7 +52,7 @@ module.exports = {
 			this[name] = log.getLogger(c.name);
 		});
 
-		this.cwLogger = log.agent;
+		this.cwLogger = log.getLogger('agent');
 
 		this.logger.info('init cw-agent ...');
 
