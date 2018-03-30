@@ -17,7 +17,14 @@ module.exports = {
 		return app.consoleLogger;
 	},
 	getLogger(name) {
-		return this.app[name];
+    let l = this.app[name];
+    if (!l) {
+      l = this.app[`${name}Logger`];
+    }
+    if (!l) {
+      throw new Error(`the logger: ${name}, not exist`);
+    }
+    return l;
 	},
 	buildReturnObject(ret, errCode, msg, data) {
 		const result = {
