@@ -5,10 +5,10 @@ module.exports = (options, app) => async function apiResponse(ctx, next) {
   try {
     await next();
     if (ctx.response.status === 404 && ctx.body === undefined) {
-      // ctx.response.status = 404; // 手动设置
+      ctx.response.status = 404; // 手动设置
       ctx.body = ctx.buildReturnObject(
         apiCode.retCodeEnum.success,
-        apiCode.errCodeEnum.notReturnData, 'success', null
+        apiCode.errCodeEnum.notReturnData, '此接口不存在或无数据返回', null
       );
     }
   } catch (e) {
