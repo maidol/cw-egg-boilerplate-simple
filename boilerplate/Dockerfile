@@ -15,7 +15,7 @@ WORKDIR /var/app
 
 COPY ./package.json /var/app
 
-RUN npm install
+RUN npm install --production
 
 COPY . /var/app
 
